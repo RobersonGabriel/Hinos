@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transposição de Acordes</title>
+  </head>
+  <body>
+    <label for="tonalidade">Escolha a tonalidade:</label>
+    <select id="tonalidade" onchange="alterarTom()">
+      <option value="C" selected>C (Dó Maior)</option>
+      <option value="D">D (Ré Maior)</option>
+      <option value="E">E (Mi Maior)</option>
+      <option value="F">F (Fá Maior)</option>
+      <option value="G">G (Sol Maior)</option>
+      <option value="A">A (Lá Maior)</option>
+      <option value="B">B (Si Maior)</option>
+    </select>
+
+    <pre id="letra">
+C
+Desprezando toda a dor
+       F     C
+Eu vou a cantar
+
+E o calvário, ao pecador
+       D    G
+Sempre apontar
+  C
+Flechas transpassaram-me
+     F       C  G/B
+Padeci gran dor
+ Am         G
+Mas Jesus, minha luz
+ G7          C
+Fez-me vencedor
+    </pre>
+
+    <script>
+      const acordesOriginais = {
+        C: ['C', 'Dm', 'Em', 'F', 'G', 'Am', 'Bdim'],
+        D: ['D', 'Em', 'F#m', 'G', 'A', 'Bm', 'C#dim'],
+        E: ['E', 'F#m', 'G#m', 'A', 'B', 'C#m', 'D#dim'],
+        F: ['F', 'Gm', 'Am', 'Bb', 'C', 'Dm', 'Edim'],
+        G: ['G', 'Am', 'Bm', 'C', 'D', 'Em', 'F#dim'],
+        A: ['A', 'Bm', 'C#m', 'D', 'E', 'F#m', 'G#dim'],
+        B: ['B', 'C#m', 'D#m', 'E', 'F#', 'G#m', 'A#dim'],
+      };
+
+      const letraOriginal = `
+C
+Desprezando toda a dor
+       F     C
+Eu vou a cantar
+
+E o calvário, ao pecador
+       D    G
+Sempre apontar
+  C
+Flechas transpassaram-me
+     F       C  G/B
+Padeci gran dor
+ Am         G
+Mas Jesus, minha luz
+ G7          C
+Fez-me vencedor
+`;
+
+      function alterarTom() {
+        const tomSelecionado = document.getElementById('tonalidade').value;
+
+        // Tom original (assumindo que o hino está originalmente em C)
+        const originalTone = 'C';
+        const originalScale = acordesOriginais[originalTone];
+        const newScale = acordesOriginais[tomSelecionado];
+
+        let novaLetra = letraOriginal;
+
+        // Criar um mapeamento estrito entre os acordes originais e os novos
+        const mapeamento = {};
+        originalScale.forEach((acordeOriginal, index) => {
+          mapeamento[acordeOriginal] = newScale[index];
+        });
+
+        // Substituir os acordes com base no mapeamento
+        Object.keys(mapeamento).forEach((acordeOriginal) => {
+          const acordeNovo = mapeamento[acordeOriginal];
+          const regex = new RegExp(`(?<!\\S)${acordeOriginal}(?!\\S)`, 'g'); // Regex para acorde completo
+          novaLetra = novaLetra.replace(regex, acordeNovo);
+        });
+
+        // Atualizar o conteúdo na página
+        document.getElementById('letra').textContent = novaLetra;
+      }
+
+      // Carregar transposição inicial
+      window.onload = alterarTom;
+    </script>
+  </body>
+</html>

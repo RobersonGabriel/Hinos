@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hino em Tonalidades Maiores</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        margin: 20px;
+        background-color: #f9f9f9;
+      }
+      select {
+        margin-bottom: 20px;
+        padding: 10px;
+        font-size: 16px;
+      }
+      pre {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 15px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hino em Tonalidades Maiores</h1>
+    <label for="tonality">Escolha uma tonalidade:</label>
+    <select id="tonality">
+      <option value="C">C (Dó Maior)</option>
+      <option value="D">D (Ré Maior)</option>
+      <option value="E">E (Mi Maior)</option>
+      <option value="F">F (Fá Maior)</option>
+      <option value="G" selected>G (Sol Maior)</option>
+      <option value="A">A (Lá Maior)</option>
+      <option value="B">B (Si Maior)</option>
+    </select>
+
+    <pre id="lyrics"></pre>
+
+    <script>
+      const letrasPorTonalidade = {
+        C: `C
+Desprezando toda a dor
+       F     C
+Eu vou a cantar
+
+E o calvário, ao pecador
+       D    G
+Sempre apontar
+  C
+Flechas transpassaram-me
+     F       C  G/B
+Padeci gran dor
+ Am         G
+Mas Jesus, minha luz
+ G7          C
+Fez-me vencedor`,
+
+        D: `D
+Desprezando toda a dor
+       G     D
+Eu vou a cantar
+
+E o calvário, ao pecador
+       E    A
+Sempre apontar
+  D
+Flechas transpassaram-me
+     G       D  A/C#
+Padeci gran dor
+ Bm         A
+Mas Jesus, minha luz
+ A7          D
+Fez-me vencedor`,
+
+        E: `E
+Desprezando toda a dor
+       A     E
+Eu vou a cantar
+
+E o calvário, ao pecador
+       F#   B
+Sempre apontar
+  E
+Flechas transpassaram-me
+     A       E  B/D#
+Padeci gran dor
+ C#m        B
+Mas Jesus, minha luz
+ B7          E
+Fez-me vencedor`,
+
+        F: `F
+Desprezando toda a dor
+       B♭    F
+Eu vou a cantar
+
+E o calvário, ao pecador
+       G    C
+Sempre apontar
+  F
+Flechas transpassaram-me
+     B♭       F  C/D
+Padeci gran dor
+ Dm         C
+Mas Jesus, minha luz
+ C7          F
+Fez-me vencedor`,
+
+        G: `G
+Desprezando toda a dor
+       C     G
+Eu vou a cantar
+
+E o calvário, ao pecador
+       D    G
+Sempre apontar
+  G
+Flechas transpassaram-me
+     C       G  D/F#
+Padeci gran dor
+ Em         D
+Mas Jesus, minha luz
+ D7          G
+Fez-me vencedor`,
+
+        A: `A
+Desprezando toda a dor
+       D     A
+Eu vou a cantar
+
+E o calvário, ao pecador
+       E    A
+Sempre apontar
+  A
+Flechas transpassaram-me
+     D       A  E/G#
+Padeci gran dor
+ F#m        E
+Mas Jesus, minha luz
+ E7          A
+Fez-me vencedor`,
+
+        B: `B
+Desprezando toda a dor
+       E     B
+Eu vou a cantar
+
+E o calvário, ao pecador
+       F#   B
+Sempre apontar
+  B
+Flechas transpassaram-me
+     E       B  F#/A#
+Padeci gran dor
+ G#m        F#
+Mas Jesus, minha luz
+ F#7         B
+Fez-me vencedor`,
+      };
+
+      const tonalitySelect = document.getElementById('tonality');
+      const lyricsElement = document.getElementById('lyrics');
+
+      // Inicializar com a tonalidade padrão selecionada
+      const defaultTonality = tonalitySelect.value;
+      lyricsElement.textContent = letrasPorTonalidade[defaultTonality];
+
+      tonalitySelect.addEventListener('change', () => {
+        const selectedTonality = tonalitySelect.value;
+        lyricsElement.textContent =
+          letrasPorTonalidade[selectedTonality] || 'Letra não disponível.';
+      });
+    </script>
+  </body>
+</html>

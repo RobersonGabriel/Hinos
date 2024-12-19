@@ -1,0 +1,89 @@
+/* Resetando margens e paddings para uma aparência mais consistente */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo geral para o corpo */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Centralizar o conteúdo */
+h1,
+label,
+select {
+  text-align: center;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Título do site */
+h1 {
+  font-size: 2.5em;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Estilo dos rótulos (labels) */
+label {
+  font-size: 1.2em;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+/* Estilo para o select */
+select {
+  font-size: 1.1em;
+  padding: 10px;
+  width: 200px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Estilo do container de texto da letra */
+pre {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.2em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 800px;
+  margin: 20px auto;
+  line-height: 1.8;
+}
+
+/* Adicionando uma borda e sombra suave no select */
+select:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.6);
+}
+
+/* Estilo para o fundo e texto do botão (caso adicione um botão futuramente) */
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+button:hover {
+  background-color: #2980b9;
+}

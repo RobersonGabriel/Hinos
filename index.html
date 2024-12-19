@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hinos Dinâmicos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Lista de Hinos Dinâmicos</h1>
+    </header>
+
+    <main>
+      <section>
+        <label for="categoria">Escolha a categoria de hinos:</label>
+        <select id="categoria" onchange="mostrarHinos()">
+          <option value="" disabled selected>Selecione</option>
+          <option value="harpa">Hinos do Hinário Novo</option>
+          <option value="cantor">Hinos do Hinário Antigo</option>
+          <option value="harpa">Hinos da Harpa Cristã</option>
+          <option value="cantor">Hinos do Cantor Cristão</option>
+          <option value="salmos">Hinos de Salmos e Hinos</option>
+          <option value="noemi">Hinos da Noemi</option>
+        </select>
+      </section>
+
+      <section id="lista-hinos" style="display: none">
+        <h2 id="titulo"></h2>
+        <ol id="hinos"></ol>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 - Hinos da Fé</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

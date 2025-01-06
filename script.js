@@ -13,7 +13,7 @@ function mostrarHinos() {
     const hinosNovo = [
       {
         nome: '149 - Fá - (A FACE ADORADA DE JESUS)',
-        arquivo: '../Hinos do Hinário Novo/149/GHN149.html',
+        arquivo: 'Hinos do Hinário Novo/149.html',
       },
       {
         nome: '151- Mi - (NA JERUSALÉM DE DEUS)',

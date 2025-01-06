@@ -43,7 +43,7 @@ function mostrarHinos() {
     titulo.textContent = 'Hinos do Hinário Antigo';
     const hinosAntigo = [
       {
-        nome: '315 - Lá - [A] - FONTE DIVINAL',
+        nome: '315 - Lá - [A] - (FONTE DIVINAL)',
         arquivo: 'Hinos do Hinário Antigo/315 - FONTE DIVINAL.html',
       },
       

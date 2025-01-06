@@ -17,7 +17,7 @@ function mostrarHinos() {
       },
       {
         nome: '151- Mi - (NA JERUSALÉM DE DEUS)',
-        arquivo: '../Hinos do Hinário Novo/GHN149.html',
+        arquivo: '../Hinos do Hinário Novo/Estrutura.html',
       },
       {
         nome: '153 - Dó - (NA ROCHA ETERNA FIRMADO)',
@@ -42,7 +42,10 @@ function mostrarHinos() {
   } else if (categoria === 'cantor') {
     titulo.textContent = 'Hinos do Hinário Antigo';
     const hinosAntigo = [
-      { nome: 'Hino A', arquivo: 'hinoA.html' },
+      {
+        nome: '315 - Lá - [A] - (FONTE DIVINAL)',
+        arquivo: '../Hinos do Hinário Novo/315 - FONTE DIVINAL.html',
+      },
       { nome: 'Hino B', arquivo: 'hinoB.html' },
       { nome: 'Hino C', arquivo: 'hinoC.html' },
     ];

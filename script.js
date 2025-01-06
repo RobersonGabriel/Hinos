@@ -44,7 +44,7 @@ function mostrarHinos() {
     const hinosAntigo = [
       {
         nome: '149 - Fá - (A FACE ADORADA DE JESUS)',
-        arquivo: '/Hinos do Hinário Antigo/315 - FONTE DIVINAL.html'
+        arquivo: '/Hinos do Hinário Antigo/315 - FONTE DIVINAL.html',
       },
       
       { nome: 'Hino B', arquivo: 'hinoB.html' },

@@ -44,7 +44,7 @@ function mostrarHinos() {
     const hinosAntigo = [
       {
         nome: '315 - Lá - [A] - (FONTE DIVINAL)',
-        arquivo: '../Hinos do Hinário Novo/315 - FONTE DIVINAL.html',
+        arquivo: '../Hinos do Hinário Antigo/315 - FONTE DIVINAL.html',
       },
       { nome: 'Hino B', arquivo: 'hinoB.html' },
       { nome: 'Hino C', arquivo: 'hinoC.html' },

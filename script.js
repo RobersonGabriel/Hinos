@@ -43,9 +43,10 @@ function mostrarHinos() {
     titulo.textContent = 'Hinos do Hinário Antigo';
     const hinosAntigo = [
       {
-        nome: '315 - Lá - [A] - (FONTE DIVINAL)',
-        arquivo: '/Hinos do Hinário Antigo/315 - FONTE DIVINAL.html'
+        nome: '149 - Fá - (A FACE ADORADA DE JESUS)',
+        arquivo: '/Hinos do Hinário Antigo/315 - FONTE DIVINAL.html',
       },
+      
       { nome: 'Hino B', arquivo: 'hinoB.html' },
       { nome: 'Hino C', arquivo: 'hinoC.html' },
     ];

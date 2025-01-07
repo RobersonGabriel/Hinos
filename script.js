@@ -12,7 +12,7 @@ function mostrarHinos() {
     // Aqui define-se um array com os objetos contendo o nome do hino e o arquivo destino
     const hinosNovo = [
       {
-        nome: '163 - Re - [D]- (DEUS AMOU ESTE MONDO)',
+        nome: '163 - Re - [D] - (DEUS AMOU ESTE MONDO)',
         arquivo: 'Hinos do Hinário Novo/163 - DEUS AMOU ESTE MUNDO.html',
       },
       {

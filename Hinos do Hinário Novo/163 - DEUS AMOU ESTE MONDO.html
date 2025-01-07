@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transposição de Acordes</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <label for="tonalidade">Escolha a tonalidade:</label>
+    <select id="tonalidade" onchange="alterarTom()">
+      <option value="C">C (Dó Maior)</option>
+      <option value="D" selected>D (Ré Maior)</option>
+      <option value="E">E (Mi Maior)</option>
+      <option value="F">F (Fá Maior)</option>
+      <option value="G">G (Sol Maior)</option>
+      <option value="A">A (Lá Maior)</option>
+      <option value="B">B (Si Maior)</option>
+    </select>
+
+    <pre id="letra">
+D                       A
+Deus amou de tal maneira
+                  D A
+Este mondo sofredor,
+A            D         A
+Que à humanidade inteira
+                          D A
+Deu Seu Filho para Salvador
+
+
+   D               A    D
+E agora nunca mais perece
+       Bm                 A    D
+O que crê, mais vida eterna tem;
+          A            Bm
+Quem em Cristo permanece,
+          E       G A
+Vai ser coroado além,
+     D               A    D
+O pecado na cruz foi vencido
+                   A        D
+Podes, pela fé, vencer também;
+      A               Bm
+De justiça, ó sê vestido,
+G   D          A     D
+E receberás coroa além.
+
+    </pre>
+
+    <script>
+      const acordesOriginais = [
+        ['C', 'Dm', 'Em', 'F', 'G', 'Am', 'Bdim'], // 1: C, 2: Dm, 3: Em, ...
+        ['D', 'Em', 'F#m', 'G', 'A', 'Bm', 'C#dim'], // 1: D, 2: Em, 3: F#m, ...
+        ['E', 'F#m', 'G#m', 'A', 'B', 'C#m', 'D#dim'], // 1: E, 2: F#m, 3: G#m, ...
+        ['F', 'Gm', 'Am', 'Bb', 'C', 'Dm', 'Edim'], // 1: F, 2: Gm, 3: Am, ...
+        ['G', 'Am', 'Bm', 'C', 'D', 'Em', 'F#dim'], // 1: G, 2: Am, 3: Bm, ...
+        ['A', 'Bm', 'C#m', 'D', 'E', 'F#m', 'G#dim'], // 1: A, 2: Bm, 3: C#m, ...
+        ['B', 'C#m', 'D#m', 'E', 'F#', 'G#m', 'A#dim'], // 1: B, 2: C#m, 3: D#m, ...
+      ];
+
+      const tonalidades = ['C', 'D', 'E', 'F', 'G', 'A', 'B']; // Para facilitar a indexação
+
+      const letraOriginal = ` 
+D                       A
+Deus amou de tal maneira
+                  D A
+Este mondo sofredor,
+A            D         A
+Que à humanidade inteira
+                          D A
+Deu Seu Filho para Salvador
+
+
+   D               A    D
+E agora nunca mais perece
+       Bm                 A    D
+O que crê, mais vida eterna tem;
+          A            Bm
+Quem em Cristo permanece,
+          E       G A
+Vai ser coroado além,
+     D               A    D
+O pecado na cruz foi vencido
+                   A        D
+Podes, pela fé, vencer também;
+      A               Bm
+De justiça, ó sê vestido,
+G   D          A     D
+E receberás coroa além.
+`;
+
+      function alterarTom() {
+        const tomSelecionado = document.getElementById('tonalidade').value;
+
+        // Encontrar o índice da tonalidade original e selecionada
+        const tonalidadeOriginalIndex = tonalidades.indexOf('D'); // A é a tonalidade original
+        const tonalidadeSelecionadaIndex = tonalidades.indexOf(tomSelecionado);
+
+        const originalScale = acordesOriginais[tonalidadeOriginalIndex];
+        const newScale = acordesOriginais[tonalidadeSelecionadaIndex];
+
+        let novaLetra = letraOriginal;
+
+        // Criar um mapeamento dos acordes para a substituição
+        const mapeamento = {};
+        for (let i = 0; i < originalScale.length; i++) {
+          mapeamento[originalScale[i]] = newScale[i]; // Mapeando cada acorde original para o correspondente na nova tonalidade
+        }
+
+        // Substituir os acordes com base no mapeamento
+        novaLetra = novaLetra.replace(
+          /Cm|Dm|Em|Fm|Gm|Am|Bm|C#m|D#m|E#m|F#m|G#m|A#m|B#m|C|D|E|F|G|A|B/g,
+          (match) => {
+            return mapeamento[match] || match; // Substitui o acorde original pelo acorde mapeado
+          }
+        );
+
+        // Atualizar o conteúdo na página
+        document.getElementById('letra').textContent = novaLetra;
+      }
+
+      // Carregar transposição inicial
+      window.onload = alterarTom;
+    </script>
+  </body>
+</html>

@@ -13,7 +13,7 @@ function mostrarHinos() {
     const hinosNovo = [
       {
         nome: '163 - Re - [D]- (DEUS AMOU ESTE MONDO)',
-        arquivo: 'Hinos do Hinário Novo/163 - DEUS AMOU ESTE MONDO.html',
+        arquivo: 'Hinos do Hinário Novo/163 - DEUS AMOU ESTE MUNDO.html',
       },
       {
         nome: '151- Mi - (NA JERUSALÉM DE DEUS)',

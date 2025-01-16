@@ -1,71 +1,58 @@
+/* Estilo geral */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9;
+  background-color: #f9f9f9;
   color: #333;
 }
 
-header {
-  background-color: #4caf50;
-  color: white;
-  text-align: center;
-  padding: 15px;
-}
-
-h1 {
-  margin: 0;
-  font-size: 1.8em;
-}
-
-.content {
-  padding: 20px;
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
+/* Label e Select */
 label {
-  font-size: 1.2em;
-  margin-bottom: 10px;
   display: block;
+  font-size: 1.2em;
+  margin: 1rem 0 0.5rem;
+  text-align: center;
+  color: #444;
 }
 
 select {
-  font-size: 1.1em;
-  padding: 8px;
-  width: 100%;
-  border-radius: 4px;
+  display: block;
+  margin: 0 auto 1rem;
+  padding: 0.5rem;
+  font-size: 1em;
   border: 1px solid #ccc;
-  background-color: #fff;
-  margin-bottom: 20px;
+  border-radius: 5px;
+  max-width: 90%;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-pre {
-  background-color: #f8f8f8;
-  padding: 15px;
-  font-size: 1.1em;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  border-radius: 4px;
+/* Estilo do hino */
+pre#letra {
+  white-space: pre; /* Mantém o texto exatamente como no HTML */
+  background: #fff;
+  padding: 1rem;
+  margin: 1rem auto;
   border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 90%;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1em; /* Tamanho da fonte padrão */
+  line-height: 1.5;
+  color: #222;
 }
 
-@media (max-width: 600px) {
+/* Cifras */
+pre#letra span {
+  font-weight: bold;
+  color: #007BFF; /* Azul para destacar as cifras */
+}
+
+/* Responsividade para iPhone 13 */
+@media screen and (max-width: 390px) {
   body {
-    padding: 10px;
-  }
-
-  .content {
-    padding: 15px;
-    width: 100%;
-    box-shadow: none;
-  }
-
-  h1 {
-    font-size: 1.5em;
+    font-size: 16px;
+    padding: 0;
   }
 
   label {
@@ -73,10 +60,11 @@ pre {
   }
 
   select {
-    font-size: 1em;
+    font-size: 0.9em;
   }
 
-  pre {
-    font-size: 1em;
+  pre#letra {
+    font-size: 0.8em; /* Diminui o tamanho da fonte */
+    line-height: 1.4; /* Ajusta o espaçamento entre linhas */
   }
 }

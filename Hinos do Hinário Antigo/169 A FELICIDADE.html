@@ -7,32 +7,43 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <label for="tonalidade">315 - Fonte Divinal:</label>
+    <label for="tonalidade"> 169 A FELICIDADE:</label>
     <select id="tonalidade" onchange="alterarTom()">
-      <option value="C">C (Dó Maior)</option>
+      <option value="C"selected>C (Dó Maior)</option>
       <option value="D">D (Ré Maior)</option>
       <option value="E">E (Mi Maior)</option>
       <option value="F">F (Fá Maior)</option>
       <option value="G">G (Sol Maior)</option>
-      <option value="A" selected>A (Lá Maior)</option>
+      <option value="A" >A (Lá Maior)</option>
       <option value="B">B (Si Maior)</option>
     </select>
 
     <pre id="letra">
-A            D       A  C#m      F#m     Bm E
-Core uma fonte divinal, o sangue do Senhor
-      A        D       A       E        A (D A)
-Pode alcançar perdão ali o pobre pescador.
+C 
+Estou seguindo a Cristo 
+             Am                 Dm
+Um santo caminho que vai para o céu.
+G 
+Passei por outros caminhos
+                       C
+Mas felicidade não encontrei
 
-
-A        E         D
-Eu creio, sim, eu creio:
-    A     F#m      Bm   E
-Na cruz Jesus morreu
-    A              D      A
-E foi por mim, em meu lugar,
-          E        A  (D A)
-que o Salvador sofreu.
+           F
+Não tenho mais saudades
+         G                     Em
+Dos tristes caminhos por onde passei,
+ Am          Dm              G 
+Pois a felicidade que eu almejava
+        C
+Agora encontrei.
+                 F 
+Não tenho mais saudades
+           G               Em
+Porque neste mundo só tem ilusão
+ Am              Am               G           C
+Felicidade é Cristo, e hoje ele mora no meu coração.
+      
+      
     </pre>
 
     <script>
@@ -49,27 +60,39 @@ que o Salvador sofreu.
       const tonalidades = ['C', 'D', 'E', 'F', 'G', 'A', 'B']; // Para facilitar a indexação
 
       const letraOriginal = ` 
-A            D       A  C#m      F#m     Bm E
-Core uma fonte divinal, o sangue do Senhor
-      A        D       A       E        A (D A)
-Pode alcançar perdão ali o pobre pescador.
+	
+	C 
+	Estou seguindo a Cristo 
+	             Am                 Dm
+	Um santo caminho que vai para o céu.
+	G 
+	Passei por outros caminhos
+	                       C
+	Mas felicidade não encontrei
+
+	           F
+	Não tenho mais saudades
+	         G                     Em
+	Dos tristes caminhos por onde passei,
+	 Am          Dm              G 
+	Pois a felicidade que eu almejava
+	        C
+	Agora encontrei.
+	                 F 
+	Não tenho mais saudades
+	           G               Em
+	Porque neste mundo só tem ilusão
+	 Am              Am               G           C
+	Felicidade é Cristo, e hoje ele mora no meu coração.
 
 
-A        E         D
-Eu creio, sim, eu creio:
-    A     F#m      Bm   E
-Na cruz Jesus morreu
-    A              D      A
-E foi por mim, em meu lugar,
-          E        A  (D A)
-que o Salvador sofreu.
 `;
 
       function alterarTom() {
         const tomSelecionado = document.getElementById('tonalidade').value;
 
         // Encontrar o índice da tonalidade original e selecionada
-        const tonalidadeOriginalIndex = tonalidades.indexOf('A'); // A é a tonalidade original
+        const tonalidadeOriginalIndex = tonalidades.indexOf('C'); // A é a tonalidade original
         const tonalidadeSelecionadaIndex = tonalidades.indexOf(tomSelecionado);
 
         const originalScale = acordesOriginais[tonalidadeOriginalIndex];

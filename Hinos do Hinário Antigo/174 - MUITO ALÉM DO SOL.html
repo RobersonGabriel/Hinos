@@ -7,32 +7,35 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <label for="tonalidade">315 - Fonte Divinal:</label>
+    <label for="tonalidade"> 174 - Muito além do sol:</label>
     <select id="tonalidade" onchange="alterarTom()">
-      <option value="C">C (Dó Maior)</option>
+      <option value="C"selected>C (Dó Maior)</option>
       <option value="D">D (Ré Maior)</option>
       <option value="E">E (Mi Maior)</option>
       <option value="F">F (Fá Maior)</option>
       <option value="G">G (Sol Maior)</option>
-      <option value="A" selected>A (Lá Maior)</option>
+      <option value="A" >A (Lá Maior)</option>
       <option value="B">B (Si Maior)</option>
     </select>
 
     <pre id="letra">
-A            D       A  C#m      F#m     Bm E
-Core uma fonte divinal, o sangue do Senhor
-      A        D       A       E        A (D A)
-Pode alcançar perdão ali o pobre pescador.
+C              Am           C      Am
+Aqui no mundo, não tenho riquezas 
+			   Dm      G        C    G
+Sei que lá na glória, tenho uma mansão;
+		  C      Am             C   Am
+Qual alma perdida, em meio às pobrezas
+				Dm   G         C   C7
+De mim Jesus Cristo teve compaixão.
 
-
-A        E         D
-Eu creio, sim, eu creio:
-    A     F#m      Bm   E
-Na cruz Jesus morreu
-    A              D      A
-E foi por mim, em meu lugar,
-          E        A  (D A)
-que o Salvador sofreu.
+					 F   G     Em  Am
+(BIS) Muito além do sol
+			  Dn        F         G
+Eu tenho um lar, o meu lar de escol
+	   G7      C
+Muito além do sol.
+      
+      
     </pre>
 
     <script>
@@ -49,27 +52,30 @@ que o Salvador sofreu.
       const tonalidades = ['C', 'D', 'E', 'F', 'G', 'A', 'B']; // Para facilitar a indexação
 
       const letraOriginal = ` 
-A            D       A  C#m      F#m     Bm E
-Core uma fonte divinal, o sangue do Senhor
-      A        D       A       E        A (D A)
-Pode alcançar perdão ali o pobre pescador.
+C              Am           C      Am
+Aqui no mundo, não tenho riquezas 
+			   Dm      G        C    G
+Sei que lá na glória, tenho uma mansão;
+		  C      Am             C   Am
+Qual alma perdida, em meio às pobrezas
+				Dm   G         C   C7
+De mim Jesus Cristo teve compaixão.
+
+					 F   G     Em  Am
+(BIS) Muito além do sol
+			  Dn        F         G
+Eu tenho um lar, o meu lar de escol
+	   G7      C
+Muito além do sol.
 
 
-A        E         D
-Eu creio, sim, eu creio:
-    A     F#m      Bm   E
-Na cruz Jesus morreu
-    A              D      A
-E foi por mim, em meu lugar,
-          E        A  (D A)
-que o Salvador sofreu.
 `;
 
       function alterarTom() {
         const tomSelecionado = document.getElementById('tonalidade').value;
 
         // Encontrar o índice da tonalidade original e selecionada
-        const tonalidadeOriginalIndex = tonalidades.indexOf('A'); // A é a tonalidade original
+        const tonalidadeOriginalIndex = tonalidades.indexOf('C'); // A é a tonalidade original
         const tonalidadeSelecionadaIndex = tonalidades.indexOf(tomSelecionado);
 
         const originalScale = acordesOriginais[tonalidadeOriginalIndex];

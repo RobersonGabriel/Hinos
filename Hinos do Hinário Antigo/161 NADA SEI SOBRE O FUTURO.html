@@ -7,32 +7,46 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <label for="tonalidade">315 - Fonte Divinal:</label>
+    <label for="tonalidade"> 161 NADA SEI SOBRE O FUTURO:</label>
     <select id="tonalidade" onchange="alterarTom()">
       <option value="C">C (Dó Maior)</option>
       <option value="D">D (Ré Maior)</option>
-      <option value="E">E (Mi Maior)</option>
+      <option value="E"selected>E (Mi Maior)</option>
       <option value="F">F (Fá Maior)</option>
       <option value="G">G (Sol Maior)</option>
-      <option value="A" selected>A (Lá Maior)</option>
+      <option value="A">A (Lá Maior)</option>
       <option value="B">B (Si Maior)</option>
     </select>
 
     <pre id="letra">
-A            D       A  C#m      F#m     Bm E
-Core uma fonte divinal, o sangue do Senhor
-      A        D       A       E        A (D A)
-Pode alcançar perdão ali o pobre pescador.
+  E                  A7   
+Nada seu sobre o futuro.
+  D                 A
+Desconheço o que haverá.
+   D                A
+É provável que as nuvens,
+         B7    E
+Minha luz apagará
+        A         A7
+Nada temo do futuro
+       D           A
+Pois Jesus comigo está
+      D     A
+Eu o sigo decidido
+     F#m Bm  E    A
+Seu poder me guiará
 
+       D             A
+Muitas coisas não compreendo
+   B7            E
+O amanhã, o que será?
+       A      A7   D
+Mas um doce amigo tenho
+          A    E      A    (D A)	 
+Que minha mão sustentará.
 
-A        E         D
-Eu creio, sim, eu creio:
-    A     F#m      Bm   E
-Na cruz Jesus morreu
-    A              D      A
-E foi por mim, em meu lugar,
-          E        A  (D A)
-que o Salvador sofreu.
+      
+      
     </pre>
 
     <script>
@@ -49,27 +63,41 @@ que o Salvador sofreu.
       const tonalidades = ['C', 'D', 'E', 'F', 'G', 'A', 'B']; // Para facilitar a indexação
 
       const letraOriginal = ` 
-A            D       A  C#m      F#m     Bm E
-Core uma fonte divinal, o sangue do Senhor
-      A        D       A       E        A (D A)
-Pode alcançar perdão ali o pobre pescador.
+    
+  E                  A7   
+Nada seu sobre o futuro.
+  D                 A
+Desconheço o que haverá.
+   D                A
+É provável que as nuvens,
+         B7    E
+Minha luz apagará
+        A         A7
+Nada temo do futuro
+       D           A
+Pois Jesus comigo está
+      D     A
+Eu o sigo decidido
+     F#m Bm  E    A
+Seu poder me guiará
+
+       D             A
+Muitas coisas não compreendo
+   B7            E
+O amanhã, o que será?
+       A      A7   D
+Mas um doce amigo tenho
+          A    E      A    (D A)	 
+Que minha mão sustentará.
 
 
-A        E         D
-Eu creio, sim, eu creio:
-    A     F#m      Bm   E
-Na cruz Jesus morreu
-    A              D      A
-E foi por mim, em meu lugar,
-          E        A  (D A)
-que o Salvador sofreu.
 `;
 
       function alterarTom() {
         const tomSelecionado = document.getElementById('tonalidade').value;
 
         // Encontrar o índice da tonalidade original e selecionada
-        const tonalidadeOriginalIndex = tonalidades.indexOf('A'); // A é a tonalidade original
+        const tonalidadeOriginalIndex = tonalidades.indexOf('E'); // A é a tonalidade original
         const tonalidadeSelecionadaIndex = tonalidades.indexOf(tomSelecionado);
 
         const originalScale = acordesOriginais[tonalidadeOriginalIndex];

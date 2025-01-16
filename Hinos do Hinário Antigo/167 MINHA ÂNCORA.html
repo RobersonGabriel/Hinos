@@ -7,32 +7,38 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <label for="tonalidade">315 - Fonte Divinal:</label>
+    <label for="tonalidade"> 167 MINHA ÂNCORA É JESUS:</label>
     <select id="tonalidade" onchange="alterarTom()">
       <option value="C">C (Dó Maior)</option>
       <option value="D">D (Ré Maior)</option>
       <option value="E">E (Mi Maior)</option>
       <option value="F">F (Fá Maior)</option>
-      <option value="G">G (Sol Maior)</option>
-      <option value="A" selected>A (Lá Maior)</option>
+      <option value="G"selected>G (Sol Maior)</option>
+      <option value="A" >A (Lá Maior)</option>
       <option value="B">B (Si Maior)</option>
     </select>
 
     <pre id="letra">
-A            D       A  C#m      F#m     Bm E
-Core uma fonte divinal, o sangue do Senhor
-      A        D       A       E        A (D A)
-Pode alcançar perdão ali o pobre pescador.
+	
+G                D                            G
+Meu barco vai nevegando, sobre as ondas deste mar, 
+    Em           Am          D                 G
+As ondas já se levantam, querendo tragar minha nau;
+                   D              D7       G
+Mas, eu tenho uma âncora, em que posso confiar.
+     Em         Am        D         G     ( C D G)
+Esta âncora é Jesus, veio para me salvar.
 
-
-A        E         D
-Eu creio, sim, eu creio:
-    A     F#m      Bm   E
-Na cruz Jesus morreu
-    A              D      A
-E foi por mim, em meu lugar,
-          E        A  (D A)
-que o Salvador sofreu.
+               D             D7        G
+Minha âncora é Jesus! Minha âncora é Jesus!
+Em         Am                D
+Venham os ventos, venham as ondas,
+     C              G    
+Tempestade o que vier!
+     Em          Am        D           G    ( C G )
+Meu barco vai navegando, viajando pela Fé.
+    
+      
     </pre>
 
     <script>
@@ -49,27 +55,33 @@ que o Salvador sofreu.
       const tonalidades = ['C', 'D', 'E', 'F', 'G', 'A', 'B']; // Para facilitar a indexação
 
       const letraOriginal = ` 
-A            D       A  C#m      F#m     Bm E
-Core uma fonte divinal, o sangue do Senhor
-      A        D       A       E        A (D A)
-Pode alcançar perdão ali o pobre pescador.
+	
+G                D                            G
+Meu barco vai nevegando, sobre as ondas deste mar, 
+    Em           Am          D                 G
+As ondas já se levantam, querendo tragar minha nau;
+                   D              D7       G
+Mas, eu tenho uma âncora, em que posso confiar.
+     Em         Am        D         G     ( C D G)
+Esta âncora é Jesus, veio para me salvar.
+
+               D             D7        G
+Minha âncora é Jesus! Minha âncora é Jesus!
+Em         Am                D
+Venham os ventos, venham as ondas,
+     C              G    
+Tempestade o que vier!
+     Em          Am        D           G    ( C G )
+Meu barco vai navegando, viajando pela Fé.
 
 
-A        E         D
-Eu creio, sim, eu creio:
-    A     F#m      Bm   E
-Na cruz Jesus morreu
-    A              D      A
-E foi por mim, em meu lugar,
-          E        A  (D A)
-que o Salvador sofreu.
 `;
 
       function alterarTom() {
         const tomSelecionado = document.getElementById('tonalidade').value;
 
         // Encontrar o índice da tonalidade original e selecionada
-        const tonalidadeOriginalIndex = tonalidades.indexOf('A'); // A é a tonalidade original
+        const tonalidadeOriginalIndex = tonalidades.indexOf('G'); // A é a tonalidade original
         const tonalidadeSelecionadaIndex = tonalidades.indexOf(tomSelecionado);
 
         const originalScale = acordesOriginais[tonalidadeOriginalIndex];

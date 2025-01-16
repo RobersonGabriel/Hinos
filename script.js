@@ -15,54 +15,54 @@ function mostrarHinos() {
 
       {
         nome: '154 SÊ VALENTE',
-        arquivo: '../Hinos do Hinário Novo/154 SÊ VALENTE.html',
+        arquivo: 'Hinos do Hinário Novo/154 SÊ VALENTE.html',
       },
 
       {
         nome: '156 CÉU PRA MIM',
-        arquivo: '../Hinos do Hinário Novo/156 CÉU PRA MIM.html',
+        arquivo: 'Hinos do Hinário Novo/156 CÉU PRA MIM.html',
       },
 
       {
         nome: '159 RESSURREIÇÃO',
-        arquivo: '../Hinos do Hinário Novo/159 RESSURREIÇÃO.html',
+        arquivo: 'Hinos do Hinário Novo/159 RESSURREIÇÃO.html',
       },
 
       {
         nome: '162 RICA PROMESSA',
-        arquivo: '../Hinos do Hinário Novo/162 RICA PROMESSA.html',
+        arquivo: 'Hinos do Hinário Novo/162 RICA PROMESSA.html',
       },
 
       {
         nome: '163 DEUS AMOU ESTE MUNDO',
-        arquivo: '../Hinos do Hinário Novo/163 DEUS AMOU ESTE MUNDO.html',
+        arquivo: 'Hinos do Hinário Novo/163 DEUS AMOU ESTE MUNDO.html',
       },
 
       {
         nome: '166 BREVE VEM O DIA',
-        arquivo: '../Hinos do Hinário Novo/166 BREVE VEM O DIA.html',
+        arquivo: 'Hinos do Hinário Novo/166 BREVE VEM O DIA.html',
       },
 
       {
         nome: '168 PELO SANGUE',
-        arquivo: '../Hinos do Hinário Novo/168 PELO SANGUE.html',
+        arquivo: 'Hinos do Hinário Novo/168 PELO SANGUE.html',
       },
 
       {
         nome: '178 ADORAÇÃO',
-        arquivo: '../Hinos do Hinário Novo/178 ADORAÇÃO.html',
+        arquivo: 'Hinos do Hinário Novo/178 ADORAÇÃO.html',
       },
 
       
       {
         nome: '315 FONTE DIVINAL',
-        arquivo: '../Hinos do Hinário Novo/315 FONTE DIVINAL.html',
+        arquivo: 'Hinos do Hinário Novo/315 FONTE DIVINAL.html',
       },
 
       
       {
         nome: '358 MEUS PECADOS LEVOU',
-        arquivo: '../Hinos do Hinário Novo/358 MEUS PECADOS LEVOU.html',
+        arquivo: 'Hinos do Hinário Novo/358 MEUS PECADOS LEVOU.html',
       },
     ];
 
@@ -81,35 +81,35 @@ function mostrarHinos() {
     const hinosAntigo = [
       {
         nome: '161 NADA SEI SOBRE O FUTURO',
-        arquivo: '../Hinos do Hinário Antigo/161 NADA SEI SOBRE O FUTURO.html',
+        arquivo: 'Hinos do Hinário Antigo/161 NADA SEI SOBRE O FUTURO.html',
       },
       {
         nome: '167 MINHA ÂNCORA',
-        arquivo: '../Hinos do Hinário Antigo/167 MINHA ÂNCORA.html',
+        arquivo: 'Hinos do Hinário Antigo/167 MINHA ÂNCORA.html',
       },
       {
         nome: '168 SAUDADES DE SIÃO',
-        arquivo: '../Hinos do Hinário Antigo/168 SAUDADES DE SIÃO.html',
+        arquivo: 'Hinos do Hinário Antigo/168 SAUDADES DE SIÃO.html',
       },
       {
         nome: '169 A FELICIDADE',
-        arquivo: '../Hinos do Hinário Antigo/169 A FELICIDADE.html',
+        arquivo: 'Hinos do Hinário Antigo/169 A FELICIDADE.html',
       },
       {
         nome: '172 - EU ERA UM PECADOR',
-        arquivo: '../Hinos do Hinário Antigo/172 - EU ERA UM PECADOR.html',
+        arquivo: 'Hinos do Hinário Antigo/172 - EU ERA UM PECADOR.html',
       },
       {
         nome: '174 - MUITO ALÉM DO SOL',
-        arquivo: '../Hinos do Hinário Antigo/174 - MUITO ALÉM DO SOL.html',
+        arquivo: 'Hinos do Hinário Antigo/174 - MUITO ALÉM DO SOL.html',
       },
       {
         nome: '315 - FONTE DIVINAL',
-        arquivo: '../Hinos do Hinário Antigo/315 - FONTE DIVINAL.html',
+        arquivo: 'Hinos do Hinário Antigo/315 - FONTE DIVINAL.html',
       },
       {
         nome: '364 CENA DA CRUZ',
-        arquivo: '../Hinos do Hinário Antigo/364 CENA DA CRUZ.html',
+        arquivo: 'Hinos do Hinário Antigo/364 CENA DA CRUZ.html',
       },
     ];
 
